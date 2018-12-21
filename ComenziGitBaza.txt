@@ -1,0 +1,89 @@
+Lista de comenzi Git studiate la curs.
+- git remote add origin 
+https://github.com/AntoneacVictor/Exersare-Git.git   -conectare cu 
+repositoriu
+- git clone https://github.com/AntoneacVictor/Exersare-Git.git   - 
+clonare repositoriu pe Pc local
+
+- git branch		  - arata ramurile
+- git checkout ramuraMea  - treci in ramura
+- git branch -d ramuraMea - sterge ramura
+- git branch -m ramuraMea - modifica ramura
+
+- touch 			 - creaza un fisier
+- git add 			 - adaug fisierul 
+- git commit -m "Commentariu" 	 -adaugam comentariu
+- git commit    		 - adaugare comentariu dar se deschide 
+editor, Pt salvare      :wq   si Enter 
+- git commit --amend 		 - editam ultimul comentariu in caz ca 
+am gresit  
+- git push origin ramuraMea      - incarc pe ramura mea fisierele
+
+- git push --force origin ramuraMea 			- editarile 
+facute local se actualizeaza si pe server
+- git revert febed3c643833f4018a8e7c25bb61f45698010fb   - revenim la un 
+comentariu creat anterior, pt asta copiem codul comentariului din  - git 
+log  
+
+- git tag v1 - salvam versiunea, sau modificarile fisierelor in v1.adica 
+in denumirea la versia curenta care o salvezi
+	       dar nu inainte de a face - git add, si git - commit -m 
+'coment 1' , APOI ca sa ne intoarcem la o oarecare 
+	       versiune salvata de noi scrim 
+	       - git checkout v1 
+
+	       	
+
+
+git reset HEAD~2 sterge si revine cu la comitul din ura, adica in cazul 
+dat 2 commituri
+rebase, merge, remote de stiut 
+SE PUNE NOTA PENTRU INFO NOU, COMENZI, 
+PUSH FORCE
+CONFLICTE
+
+ 
+------------------------------------------------------------------------------------------
+--remote(pe net, pe git)						
+local(fisierele locale)
+ ---master(branch online)						
+master(branch pe loc)  master local al trebui sa fie acelasi)
+	developers(branch)					
+developer(branch in care lucram)
+
+daca ramura developer(remote) nu avem nevoie de ce e in ra, nu face pull 
+ca sa copiem local
+schimbarile
+ci facem push force la ramura noastra developer(local) care se va 
+transcrie peste cea dea colo(remote)
+In master ar fi de dorit nu prea de facut modificari.
+
+Git merge master
+
+
+MERGE
+intr-o ramura facem un fisier cu ceva info
+in alta ramura acelsasi fisier cu aceeasi info dar modificata, rinduri, 
+cuvinte (in ambele cazuri, facem mai intii add, si commit la fisiere)
+dam git merge (ramura) si apare conflict
+deschidem fisierul cu confilct, modificam cum avem nevoie, salvam, add, 
+commit, si sa rezolvat conflictul
+
+
+
+git rebase ( la fel ca merge)
+
+Diferenta consta (rebase face schimb, nu se pastraza totul, modificarile 
+se pierd) la merge (se pastreaza in istorie tot, comituri, modificarri
+git abort --rebase    -abordare facerii rebase
+
+git stash  (avem o modificare dar nu avem nevoie sa facem add si comit, 
+dar sa ne intorcem mai tirziu
+dar avem nevoie sa schimba ramura) facem git stash, dispare modificarea
+acum putem trece in alta ramura, nu se vede modificarile in toate 
+fisierele ca in cazul cind 
+nu facem comit
+revenim inapoi la ramura ceea cu modificare fara comit
+utilizam comanda ----git stash pop ------ si vor aparea modificarile 
+care trebuie facute commit
+
